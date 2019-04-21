@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <p id="demo"></p>
+    <body>
+    	<script>
+    		var a = 0;
+            var b = 300;
+    		var check = document.getElementById("demo");
+            function myFunction(){
+                if(a == 300){
+                    b--;
+                    check.innerHTML = b;
+                    check.style.marginTop = b + "px";
+                    check.style.marginLeft = b + "px";
+                    if(b == 0){
+                        clearInterval(stop);
+                    }
+                }else {
+                    a++;
+                    check.innerHTML = a;
+                    check.style.marginTop = a + "px";
+                    check.style.marginLeft = a + "px";
+                }
+    		}var stop = setInterval(myFunction,100);
+
+    	</script>
+        
+    </body>
+</html>
